@@ -4,7 +4,14 @@ Author: Kiran Anand
 Date: 04/11/2020;
 */
 
-body
-{
-    background: black;
-}
+    body
+    {
+        background: #e7e7e7;
+    }
+
+    header
+    {
+        background: #fff;
+        width: 100%;
+        height: 100px;
+    }
