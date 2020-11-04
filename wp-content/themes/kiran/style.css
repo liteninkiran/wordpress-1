@@ -3,3 +3,8 @@ Theme Name: Test Theme
 Author: Kiran Anand
 Date: 04/11/2020;
 */
+
+body
+{
+    background: black;
+}
