@@ -11,17 +11,20 @@
 
     if(have_posts())
     {
+        // Loop through posts
         while(have_posts())
         {
+            // Iterate on to next post
             the_post();
-            echo the_content();
+
+            // Store content
+            $content = the_content();
+
+            // Output content
+            echo $content;
         }
     }
 
 ?>
-
-    <div class="container">
-        <?php include 'lorem.php'; ?>
-    </div>
 
 <?php get_footer(); ?>
