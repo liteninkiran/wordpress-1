@@ -29,6 +29,7 @@
     add_action('wp_enqueue_scripts', 'loadJQuery');
 
     add_theme_support('menus');
+    add_theme_support('post-thumbnails');
 
     register_nav_menus(
         array(
@@ -36,5 +37,8 @@
             'footer-menu' => __('Footer Menu', 'theme'),
         )
     );
+
+    add_image_size('smallest', 300, 300, true);
+    add_image_size('largest', 800, 800, true);
 
 ?>

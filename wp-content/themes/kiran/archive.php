@@ -1,5 +1,5 @@
 
-<?php get_header(); ?>
+    <?php get_header(); ?>
 
     <div class="container pt-5 pb-5">
 
@@ -7,29 +7,26 @@
 
     </div>
 
-<?php
 
-    if(have_posts())
-    {
-?>
-        <div class="container">
-<?
-            // Loop through posts
-            while(have_posts())
-            {
-                // Iterate on to next post
-                the_post();
 
-                // Output title & excerpt
-                the_title();
-                the_excerpt();
-            }
-?>
-        </div>
-<?
+    <div class="container">
 
-    }
+        <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 
-?>
+            <div class="card mb-4">
 
-<?php get_footer(); ?>
+                <div class="card-body">
+
+                    <h3><?php the_title(); ?></h3>
+                    <?php the_excerpt(); ?>
+                    <a href="<?php the_permalink(); ?>" class="btn btn-success">Read More</a>
+
+                </div>
+
+            </div>
+
+        <?php endwhile; endif; ?>
+
+    </div>
+
+    <?php get_footer(); ?>
