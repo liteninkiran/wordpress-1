@@ -11,18 +11,22 @@
 
     if(have_posts())
     {
-        // Loop through posts
-        while(have_posts())
-        {
-            // Iterate on to next post
-            the_post();
+?>
+        <div class="container">
+<?
+            // Loop through posts
+            while(have_posts())
+            {
+                // Iterate on to next post
+                the_post();
 
-            // Store content
-            $content = the_content();
+                // Output content
+                the_content();
+            }
+?>
+        </div>
+<?
 
-            // Output content
-            echo $content;
-        }
     }
 
 ?>
