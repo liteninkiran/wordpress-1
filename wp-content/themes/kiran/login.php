@@ -25,7 +25,15 @@
 
             $verifyUser = wp_signon($loginArray, true);
 
-            var_dump($verifyUser);
+            // Check if sign-in errored
+            if(is_wp_error($verifyUser))
+            {
+                echo "<p>Invalid Credentials</p>";
+            }
+            else
+            {
+                echo "<script>window.location = '" . site_url() . "'</script>";
+            }
         }
         else
         {

@@ -40,6 +40,10 @@
                         )
                     );
                 }
+                else
+                {
+                    echo "<h1>Pre Login Header</h1>";
+                }
 ?>
 
             </div>
