@@ -30,7 +30,7 @@
     
 <?php
 
-                if($userId)
+                if($user_ID)
                 {
                     wp_nav_menu(
                         array

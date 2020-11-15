@@ -2,18 +2,17 @@
 
     /* Template Name: Login Page */
 
-    global $userId;
+    global $user_ID;
     global $wpdb;
 
     get_header();
 
-    if($userId)
+    if($user_ID)
     {
-
+        echo "Logged In";
     }
     else
     {
-
         if($_POST)
         {
             $email = $wpdb->prepare($_POST['username']);
